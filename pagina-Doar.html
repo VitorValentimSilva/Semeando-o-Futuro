@@ -57,6 +57,7 @@
           <li><a href="index.html#recent-posts">Ajude também</a></li>
           <li><a href="pagina-Doar.html">Doar</a></li>
           <li><a href="index.html#contact">Contato</a></li>
+          <li><a href="#">Entrar</a></li>
         </ul>
       </nav>
 
@@ -104,39 +105,40 @@
         <p><strong>4 - Confirmação e Recibo:</strong> Após sua doação ser processada, você receberá uma confirmação por e-mail juntamente com um recibo de doação. Fique tranquilo, todas as suas informações pessoais serão tratadas com confidencialidade e segurança.</p><br>
       </div>
 
-      <div class="section-header">
-        <h2>Fazer a doação</h2>
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Fazer a doação</h2>
 
-        <p>Sua doação é extremamente valiosa para nós e nos ajuda a continuar trabalhando para um futuro mais sustentável. Agradecemos sinceramente por seu apoio e por fazer parte da nossa missão.</p>
-      </div>
-      
-      <form action="doacaoFeita.html" method="post">
-          
-        <div id="valores">
-          <label for="valor">Escolha o valor que voce quer doar: </label>
-          <select name="opcoes1">
-            <option value="Opção 1">R$ 10,00</option>
-            <option value="Opção 2">R$ 30,00</option>
-            <option value="Opção 3">R$ 50,00</option>
-            <option value="Opção 4">R$ 70,00</option>
-            <option value="Opção 5">R$ 100,00</option>
-            <option value="Opção 6">Outro valor</option>
-          </select>
-
-          <br><label for="ioutroValor">Se voce selecionou "Outro valor", digite qual vai ser o valor a ser doado: </label>
-          <input type="number" name="outroValor" id="ioutroValor" placeholder="R$ Valor a ser doado">
+          <p>Sua doação é extremamente valiosa para nós e nos ajuda a continuar trabalhando para um futuro mais sustentável. Agradecemos sinceramente por seu apoio e por fazer parte da nossa missão.</p>
         </div>
+      
+        <form action="doacaoFeita.html" method="post">
+          
+          <div id="valores">
+            <label for="valor">Escolha o valor que voce quer doar: </label>
+            <select name="opcoes1">
+              <option value="Opção 1">R$ 10,00</option>
+              <option value="Opção 2">R$ 30,00</option>
+              <option value="Opção 3">R$ 50,00</option>
+              <option value="Opção 4">R$ 70,00</option>
+              <option value="Opção 5">R$ 100,00</option>
+              <option value="Opção 6">Outro valor</option>
+            </select>
+
+            <br><label for="ioutroValor">Se voce selecionou "Outro valor", digite qual vai ser o valor a ser doado: </label>
+            <input type="number" name="outroValor" id="ioutroValor" placeholder="R$ Valor a ser doado">
+          </div>
 
           <div id="informacoes">
             <label for="inome">Nome: </label>
-            <input type="text" name="nome" id="inome" required placeholder="Seu nome" autocomplete="name">
+            <input type="text" name="nome" id="inome" required placeholder="Seu nome" autocomplete="name"><br>
 
             <label for="iemail">Email: </label>
-            <input type="email" name="email" id="iemail" required placeholder="Seu email" autocomplete="email">
+            <input type="email" name="email" id="iemail" required placeholder="Seu email" autocomplete="email"><br>
 
             <label for="icpf">CPF: </label>
             <input type="text" inputmode="numeric" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00"/>
-            
+              
           </div>
 
           <div id="pagamento">
@@ -149,9 +151,6 @@
             <label for="inomeCartao1">Nome impresso no cartão: </label>
             <input type="text" name="nomeCartao" id="inomeCartao1" placeholder="Nome no cartão">
 
-            <label for="inumeroCartao1">Número do cartão: </label>
-            <input type="number" name="numeroCartao" id="inumeroCartao1" placeholder="0000 0000 0000 0000">
-
             <select name="opcoes2">
               <option value="Opção 7">Visa</option>
               <option value="Opção 8">MasterCard</option>
@@ -160,16 +159,19 @@
               <option value="Opção 11">Ucb</option>
               <option value="Opção 12">American Express</option>
               <option value="Opção 13">Discover Network</option>
-            </select>
+            </select><br>
+
+            <label for="icvc1">CVC: </label>
+            <input type="number" name="cvc1" id="icvc1" placeholder="000" max="999">
+
+            <label for="inumeroCartao1">Número do cartão: </label>
+            <input type="number" name="numeroCartao" id="inumeroCartao1" placeholder="0000 0000 0000 0000">
 
             <label for="icpfTi1">CPF/CNPJ do titular: </label>
             <input type="number" name="cpfTi1" id="icpfTi1" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
 
             <label for="ivalidade1">Validade: </label>
-            <input type="month" name="validade1" id="ivalidade1">
-
-            <label for="icvc1">CVC: </label>
-            <input type="number" name="cvc1" id="icvc1" placeholder="000" max="999" ><br>
+            <input type="month" name="validade1" id="ivalidade1"><br>
 
             <input type="submit" value="DOAR">
           </div>
@@ -178,22 +180,22 @@
             <label for="inomeCartao2">Nome impresso no cartão: </label>
             <input type="text" name="nomeCartao2" id="inomeCartao2" placeholder="Nome no cartão">
 
-            <label for="inumeroCartao2">Número do cartão: </label>
-            <input type="number" name="numeroCartao2" id="inumeroCartao2" placeholder="0000 0000 0000 0000">
-
             <select name="opcoes3">
               <option value="Opção 14">Visa</option>
               <option value="Opção 15">MasterCard</option>
-            </select>
+            </select><br>
+
+            <label for="icvc2">CVC: </label>
+            <input type="number" name="cvc2" id="icvc2" placeholder="000" max="999">
+
+            <label for="inumeroCartao2">Número do cartão: </label>
+            <input type="number" name="numeroCartao2" id="inumeroCartao2" placeholder="0000 0000 0000 0000">
 
             <label for="icpfTi2">CPF/CNPJ do titular: </label>
             <input type="number" name="cpfTi2" id="icpfTi2" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
 
             <label for="ivalidade2">Validade: </label>
-            <input type="month" name="validade2" id="ivalidade2">
-
-            <label for="icvc2">CVC: </label>
-            <input type="number" name="cvc2" id="icvc2" placeholder="000" max="999" ><br>
+            <input type="month" name="validade2" id="ivalidade2"><br>
 
             <input type="submit" value="DOAR">
           </div>
@@ -226,6 +228,53 @@
           </div>
         </form>
       </div>
+
+      <section>
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-header">
+            <h2>Doações+Plus: Além da Contribuição Financeira</h2>
+            <p>Faça parte do nosso movimento e ajude de diferentes formas.</p>
+          </div>
+
+          <p>Na "Semeando o Futuro", acreditamos que a solidariedade vai além das doações em dinheiro. Queremos oferecer a você a oportunidade de se envolver de maneiras diferentes e significativas. Por isso, criamos o programa "Doações+Plus", que vai além das contribuições financeiras e permite que você faça parte do nosso movimento de maneiras únicas. <strong>E para isso você so precisa criar uma conta.</strong></p>
+
+          <p><strong>1 - Agendamento de Doações: Contribua no seu próprio tempo</strong><br>
+          Com o nosso sistema de agendamento de doações, você pode agendar a entrega ou coleta das suas doações de forma conveniente. Basta informar o tipo de doação, a quantidade, o local desejado e a data/hora mais adequados para você. Essa opção permite um agendamento organizado e eficiente, garantindo que suas doações sejam recebidas no momento mais oportuno. Queremos tornar o processo de doação o mais prático e flexível possível, para que você possa contribuir de acordo com a sua disponibilidade.</p>
+
+          <p><strong>2 - Cadastro de Voluntários: Seja parte ativa da nossa equipe</strong><br>
+          Nossa organização valoriza e depende do apoio dedicado de voluntários. Através do nosso sistema de cadastro de voluntários, você pode se registrar e fornecer informações como nome, contato, habilidades e disponibilidade. Essas informações nos ajudam a gerenciar de forma eficiente os recursos humanos da organização, garantindo que suas habilidades e disponibilidade sejam aproveitadas da melhor forma possível. Ao se tornar um voluntário, você terá a oportunidade de se envolver diretamente nos nossos projetos e causas, fazendo a diferença de maneira prática e impactante.</p>
+
+          <p><strong>3 - Aprovação de Agendamento: Garantindo o controle e a confiabilidade das doações</strong><br>
+          Após a realização do agendamento de doações, nossa equipe responsável pela ONG tem a importante função de aprovar os agendamentos. Isso garante o controle e a confiabilidade das doações recebidas, certificando-se de que todas as transações sejam legítimas e alinhadas aos nossos princípios e necessidades.</p>
+
+          <p><strong>4 - Definição de Projetos: Gerenciamento eficiente para alcançar objetivos</strong>
+          Através do nosso sistema, a organização tem a capacidade de definir projetos com metas, objetivos, prazos e responsáveis. Essa função auxilia na gestão dos projetos da ONG, garantindo que sejam executados de maneira eficiente e que cada ação esteja alinhada com as diretrizes e valores da nossa causa.</p>
+
+          <p><strong>5 - Registro de Realização de Atividades: Monitorando e documentando nosso impacto</strong>
+          O sistema permite o registro das atividades realizadas pela equipe da ONG, como plantio de árvores, conscientização ambiental e outras ações. Isso nos ajuda a monitorar e documentar as atividades realizadas, permitindo uma visão clara do impacto que estamos causando em nossos projetos e na comunidade. Cada atividade registrada contribui para fortalecer a transparência e a prestação de contas da nossa organização.</p>
+
+        </div>
+
+        <div class="container" data-aos="fade-up">
+
+          <div class="section-header">
+            <h2>Faça parte do nosso movimento - Crie sua conta agora!</h2>
+            <p>Queremos que você faça parte do nosso movimento e tenha acesso a todas as funcionalidades incríveis do nosso sistema "Doações+Plus". Para começar a contribuir de maneiras únicas e acompanhar de perto o impacto que sua ajuda está causando, é necessário criar uma conta.</p>
+          </div>
+
+          <p>Ao criar uma conta, você estará se tornando parte de uma comunidade comprometida com a solidariedade e o impacto positivo. Através do nosso sistema, você poderá agendar suas doações, cadastrar-se como voluntário, acompanhar projetos, registrar atividades realizadas, emitir relatórios gerenciais e estratégicos, além de ter controle total sobre suas doações.</p>
+
+          <p>Estamos ansiosos para tê-lo(a) como parte do nosso movimento. Junte-se a nós e faça a diferença hoje mesmo!</p>
+
+          <div id="conta">
+            <a href="#"><button id="entrarConta">Entrar</button></a>
+
+            <a href=""><button id="criarConta">Criar conta</button></a>
+          </div>
+
+        </div>
+      </section>
     </section>
 
   </main>

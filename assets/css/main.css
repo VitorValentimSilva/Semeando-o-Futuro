@@ -2594,21 +2594,16 @@ section {
   font-weight: bold;
 }
 
-form{
-  padding-left: 9%;
-  width: 1350px;
-}
-
 label{
   font-size: 18px;
 }
 
 #valores{
-  margin-bottom: 2%;
+  margin-bottom: 4%;
 }
 
 #valores > select{
-  margin-bottom: 2%;
+  margin-bottom: 4%;
   border-radius: 10px;
   border: 2px solid black;
   padding: 5px;
@@ -2621,8 +2616,7 @@ label{
 }
 
 #informacoes > input{
-  margin-right: 5%;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
   border-radius: 10px;
   padding: 5px;
 }
@@ -2642,7 +2636,7 @@ label{
   border-radius: 12px;
   font-weight: bold;
   padding: 1%;
-  margin-right: 35px;
+  margin-right: 2%;
   cursor: pointer;
 }
 
@@ -2661,6 +2655,7 @@ label{
 }
 
 #pagamentoCredito > input{
+  display: inline;
   margin-right: 3%;
   margin-bottom: 2%;
   border-radius: 10px;
@@ -2684,7 +2679,7 @@ label{
   padding-top: 15px;
   padding-bottom: 15px;
   font-weight: bold;
-  margin-left: 35%;
+  margin-left: 25%;
   margin-top: 1%;
 }
 
@@ -2721,7 +2716,7 @@ label{
   padding-top: 15px;
   padding-bottom: 15px;
   font-weight: bold;
-  margin-left: 35%;
+  margin-left: 25%;
   margin-top: 1%;
 }
 
@@ -2758,6 +2753,38 @@ label{
   padding-top: 15px;
   padding-bottom: 15px;
   font-weight: bold;
-  margin-left: 35%;
+  margin-left: 25%;
   margin-top: 1%;
+}
+
+#conta{
+  text-align: center;
+  margin-top: 1%;
+}
+
+#conta > a > button{
+  border-radius: 10px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right: 2%;
+  margin-top: 3%;
+  font-weight: bold;
+}
+
+#entrarConta{
+  background-color: #08b363e5;
+}
+
+#entrarConta:hover{
+  background-color: #12b9a6c9;
+}
+
+#criarConta{
+  background-color: #d62d3edc;
+}
+
+#criarConta:hover{
+  background-color: #12b9a6c9;
 }
