@@ -2593,3 +2593,171 @@ section {
   color: #df1529;
   font-weight: bold;
 }
+
+form{
+  padding-left: 9%;
+  width: 1350px;
+}
+
+label{
+  font-size: 18px;
+}
+
+#valores{
+  margin-bottom: 2%;
+}
+
+#valores > select{
+  margin-bottom: 2%;
+  border-radius: 10px;
+  border: 2px solid black;
+  padding: 5px;
+  font-weight: bold;
+}
+
+#valores > input{
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#informacoes > input{
+  margin-right: 5%;
+  margin-bottom: 2%;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#informacoes > label{
+  font-weight: bold;
+}
+
+#pagamento{
+  margin-top: 1%;
+}
+
+.opcPaga{
+  display: inline;
+  border: 2px solid black;
+  background-color: rgb(216, 216, 216);
+  border-radius: 12px;
+  font-weight: bold;
+  padding: 1%;
+  margin-right: 35px;
+  cursor: pointer;
+}
+
+#pagamentoCredito{
+  display: none;
+  margin-top: 2%;
+}
+
+.opcPaga.selecionado {
+  background-color: rgba(78, 250, 250, 0.753);
+  color: white;
+}
+
+#pagamentoCredito > label{
+  font-weight: bold;
+}
+
+#pagamentoCredito > input{
+  margin-right: 3%;
+  margin-bottom: 2%;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#pagamentoCredito > select{
+  margin-right: 3%;
+  margin-bottom: 2%;
+  border-radius: 15px;
+  border: 2px solid black;
+  padding: 5px;
+  font-weight: bold;
+}
+
+#pagamentoCredito > input[type="submit"]{
+  background-color: #4096f8;
+  border-radius: 20px;
+  padding-left: 85px;
+  padding-right: 85px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: bold;
+  margin-left: 35%;
+  margin-top: 1%;
+}
+
+#pagamentoDebito{
+  display: none;
+  margin-top: 2%;
+}
+
+#pagamentoDebito > label{
+  font-weight: bold;
+}
+
+#pagamentoDebito > input{
+  margin-right: 3%;
+  margin-bottom: 2%;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#pagamentoDebito > select{
+  margin-right: 3%;
+  margin-bottom: 2%;
+  border-radius: 15px;
+  border: 2px solid black;
+  padding: 5px;
+  font-weight: bold;
+}
+
+#pagamentoDebito > input[type="submit"]{
+  background-color: #4096f8;
+  border-radius: 20px;
+  padding-left: 85px;
+  padding-right: 85px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: bold;
+  margin-left: 35%;
+  margin-top: 1%;
+}
+
+#pagamentoDebitoEmConta{
+  display: none;
+  margin-top: 2%;
+}
+
+#pagamentoDebitoEmConta > label{
+  font-weight: bold;
+}
+
+#pagamentoDebitoEmConta > input{
+  margin-right: 3%;
+  margin-bottom: 2%;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#pagamentoDebitoEmConta > select{
+  margin-right: 3%;
+  margin-bottom: 2%;
+  border-radius: 15px;
+  border: 2px solid black;
+  padding: 5px;
+  font-weight: bold;
+}
+
+#pagamentoDebitoEmConta > input[type="submit"]{
+  background-color: #4096f8;
+  border-radius: 20px;
+  padding-left: 85px;
+  padding-right: 85px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: bold;
+  margin-left: 35%;
+  margin-top: 1%;
+}

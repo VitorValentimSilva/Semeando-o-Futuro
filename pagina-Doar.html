@@ -74,7 +74,7 @@
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
               <h2>Faça a diferença - Faça uma Doação</h2>
-              <p> Sua contribuição é essencial para o nosso trabalho. Na "Semeando o Futuro", dependemos do apoio generoso de pessoas como você para continuar promovendo nossas causas de reflorestamento, reciclagem, energias renováveis e educação ambiental. Sua doação faz a diferença e nos ajuda a criar um impacto positivo no meio ambiente.</p>
+              <p>Sua contribuição é essencial para o nosso trabalho. Na "Semeando o Futuro", dependemos do apoio generoso de pessoas como você para continuar promovendo nossas causas de reflorestamento, reciclagem, energias renováveis e educação ambiental. Sua doação faz a diferença e nos ajuda a criar um impacto positivo no meio ambiente.</p>
             </div>
           </div>
         </div>
@@ -101,54 +101,128 @@
         <p><strong>1 - Selecione o valor da sua doação:</strong> Escolha o valor que você deseja doar para nos ajudar em nosso trabalho. Cada contribuição, por menor que seja, é valiosa e significativa para nós.</p>
         <p><strong>2 - Preencha suas informações:</strong> Preencha os campos abaixo com suas informações pessoais para que possamos enviar um recibo de doação e manter você atualizado sobre nossos projetos e atividades.</p>
         <p><strong>3 - Formas de pagamento:</strong> Aceitamos diversas formas de pagamento para sua conveniência. Você pode optar por doar via cartão de crédito, cartão de débito ou débito em conta. Selecione a opção que melhor se adequa a você e siga as instruções fornecidas.</p>
-        <p><strong>4 - Confirmação e Recibo:</strong> Após sua doação ser processada, você receberá uma confirmação por e-mail juntamente com um recibo de doação. Fique tranquilo, todas as suas informações pessoais serão tratadas com confidencialidade e segurança.</p>
+        <p><strong>4 - Confirmação e Recibo:</strong> Após sua doação ser processada, você receberá uma confirmação por e-mail juntamente com um recibo de doação. Fique tranquilo, todas as suas informações pessoais serão tratadas com confidencialidade e segurança.</p><br>
       </div>
 
-      <div class="container" data-aos="fade-up">
-        <form action="">
-          <div>
-            <button>R$ 10,00</button>
-            <button>R$ 30,00</button>
-            <button>R$ 50,00</button>
-            <button>R$ 100,00</button>
-            <div>
-              <label for="ioutrosVA">Outros Valores: </label>
-              <input type="number" name="outrosVA" id="ioutrosVA">
-            </div>
-          </div>
+      <div class="section-header">
+        <h2>Fazer a doação</h2>
 
-          <div>
+        <p>Sua doação é extremamente valiosa para nós e nos ajuda a continuar trabalhando para um futuro mais sustentável. Agradecemos sinceramente por seu apoio e por fazer parte da nossa missão.</p>
+      </div>
+      
+      <form action="doacaoFeita.html" method="post">
+          
+        <div id="valores">
+          <label for="valor">Escolha o valor que voce quer doar: </label>
+          <select name="opcoes1">
+            <option value="Opção 1">R$ 10,00</option>
+            <option value="Opção 2">R$ 30,00</option>
+            <option value="Opção 3">R$ 50,00</option>
+            <option value="Opção 4">R$ 70,00</option>
+            <option value="Opção 5">R$ 100,00</option>
+            <option value="Opção 6">Outro valor</option>
+          </select>
+
+          <br><label for="ioutroValor">Se voce selecionou "Outro valor", digite qual vai ser o valor a ser doado: </label>
+          <input type="number" name="outroValor" id="ioutroValor" placeholder="R$ Valor a ser doado">
+        </div>
+
+          <div id="informacoes">
             <label for="inome">Nome: </label>
-            <input type="text" name="nome" id="inome" required>
+            <input type="text" name="nome" id="inome" required placeholder="Seu nome" autocomplete="name">
 
             <label for="iemail">Email: </label>
-            <input type="email" name="email" id="iemail" required>
+            <input type="email" name="email" id="iemail" required placeholder="Seu email" autocomplete="email">
 
             <label for="icpf">CPF: </label>
-            <input type="number" name="cpf" id="icpf">
+            <input type="text" inputmode="numeric" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00"/>
+            
           </div>
 
-          <div>
-            <button>CRÉDITO</button>
-            <button>DÉBITO</button>
-            <button>DÉBITO EM CONTA</button>
+          <div id="pagamento">
+            <p class="opcPaga" id="credito" onclick="selecionarBotao(this)">CRÉDITO</p>
+            <p class="opcPaga" id="debito" onclick="selecionarBotao(this)">DÉBITO</p>
+            <p class="opcPaga" id="debitoConta" onclick="selecionarBotao(this)">DÉBITO EM CONTA</p>
+          </div><br>
+
+          <div id="pagamentoCredito">
+            <label for="inomeCartao1">Nome impresso no cartão: </label>
+            <input type="text" name="nomeCartao" id="inomeCartao1" placeholder="Nome no cartão">
+
+            <label for="inumeroCartao1">Número do cartão: </label>
+            <input type="number" name="numeroCartao" id="inumeroCartao1" placeholder="0000 0000 0000 0000">
+
+            <select name="opcoes2">
+              <option value="Opção 7">Visa</option>
+              <option value="Opção 8">MasterCard</option>
+              <option value="Opção 9">Elo</option>
+              <option value="Opção 10">Aura</option>
+              <option value="Opção 11">Ucb</option>
+              <option value="Opção 12">American Express</option>
+              <option value="Opção 13">Discover Network</option>
+            </select>
+
+            <label for="icpfTi1">CPF/CNPJ do titular: </label>
+            <input type="number" name="cpfTi1" id="icpfTi1" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+
+            <label for="ivalidade1">Validade: </label>
+            <input type="month" name="validade1" id="ivalidade1">
+
+            <label for="icvc1">CVC: </label>
+            <input type="number" name="cvc1" id="icvc1" placeholder="000" max="999" ><br>
+
+            <input type="submit" value="DOAR">
           </div>
 
-          <div>
-            <label for="inomeCartao">NOME IMPRESSO NO CARTÃO: </label>
-            <input type="text" name="nomeCartao" id="inomeCartao" required>
+          <div id="pagamentoDebito">
+            <label for="inomeCartao2">Nome impresso no cartão: </label>
+            <input type="text" name="nomeCartao2" id="inomeCartao2" placeholder="Nome no cartão">
 
-            <label for="inumeroCartao">NÚMERO DO CARTÃO: </label>
-            <input type="number" name="inumeroCartao" id="inumeroCartao" required>
+            <label for="inumeroCartao2">Número do cartão: </label>
+            <input type="number" name="numeroCartao2" id="inumeroCartao2" placeholder="0000 0000 0000 0000">
 
-            <label for="icpfTi">CPF/CNPJ TITULAR: </label>
-            <input type="number" name="cpfTi" id="icpfTi" required>
+            <select name="opcoes3">
+              <option value="Opção 14">Visa</option>
+              <option value="Opção 15">MasterCard</option>
+            </select>
 
-            <label for="ivalidade">VALIDADE: </label>
-            <input type="number" name="validade" id="ivalidade" required>
+            <label for="icpfTi2">CPF/CNPJ do titular: </label>
+            <input type="number" name="cpfTi2" id="icpfTi2" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
 
-            <label for="icvc">CVC: </label>
-            <input type="number" name="cvc" id="icvc" required>
+            <label for="ivalidade2">Validade: </label>
+            <input type="month" name="validade2" id="ivalidade2">
+
+            <label for="icvc2">CVC: </label>
+            <input type="number" name="cvc2" id="icvc2" placeholder="000" max="999" ><br>
+
+            <input type="submit" value="DOAR">
+          </div>
+
+          <div id="pagamentoDebitoEmConta">
+            <label for="inomeCartao3">Nome do titular: </label>
+            <input type="text" name="nomeCartao3" id="inomeCartao3" placeholder="Nome do titular da conta">
+
+            <label for="idocumento">Documento Titular: </label>
+            <input type="number" name="documento" id="idocumento" placeholder="000.000.000-00">
+
+            <label for="banco">Banco: </label>
+            <select name="opcoes4">
+              <option value="Opção 20">Itaú</option>
+            </select><br>
+
+            <label for="icpfTi3">CPF/CNPJ do titular: </label>
+            <input type="number" name="cpfTi3" id="icpfTi3" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+
+            <label for="iagencia">Agência: </label>
+            <input type="number" name="agencia" id="iagencia" max="9999" placeholder="0000">
+
+            <label for="idia">Dia do debito: </label>
+            <input type="number" name="dia" id="idia" min="1" max="31" placeholder="Dia"><br>
+
+            <label for="iconta">Conta: </label>
+            <input type="number" name="conta" id="iconta" placeholder="00000-0"><br>
+
+            <input type="submit" value="DOAR">
           </div>
         </form>
       </div>
@@ -216,7 +290,7 @@
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  
 
   <script src="assets/js/main.js"></script>
 

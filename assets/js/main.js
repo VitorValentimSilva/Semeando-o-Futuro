@@ -248,3 +248,44 @@ function enviar(){
 
   sucesso.style.display = 'block'
 }
+
+function selecionarBotao(elemento) {
+  var pagamentoCredito = document.getElementById('pagamentoCredito');
+  var pagamentoDebito = document.getElementById('pagamentoDebito');
+  var pagamentoDebitoEmConta = document.getElementById('pagamentoDebitoEmConta');
+  var botoes = document.getElementsByClassName("opcPaga");
+
+  if (elemento.id === 'credito') {
+    if (pagamentoCredito.style.display === 'none') {
+      pagamentoCredito.style.display = 'block';
+    } else {
+      pagamentoCredito.style.display = 'none';
+    }
+    pagamentoDebito.style.display = 'none';
+    pagamentoDebitoEmConta.style.display = 'none';
+  } else if (elemento.id === 'debito') {
+    if (pagamentoDebito.style.display === 'none') {
+      pagamentoDebito.style.display = 'block';
+    } else {
+      pagamentoDebito.style.display = 'none';
+    }
+    pagamentoCredito.style.display = 'none';
+    pagamentoDebitoEmConta.style.display = 'none';
+  } else if (elemento.id === 'debitoConta') {
+    if (pagamentoDebitoEmConta.style.display === 'none') {
+      pagamentoDebitoEmConta.style.display = 'block';
+    } else {
+      pagamentoDebitoEmConta.style.display = 'none';
+    }
+    pagamentoCredito.style.display = 'none';
+    pagamentoDebito.style.display = 'none';
+  }
+
+  for (var i = 0; i < botoes.length; i++) {
+    if (botoes[i] !== elemento) {
+      botoes[i].classList.remove("selecionado")
+    }
+  }
+
+  elemento.classList.toggle("selecionado")
+}
