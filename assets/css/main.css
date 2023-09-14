@@ -2788,3 +2788,154 @@ label{
 #criarConta:hover{
   background-color: #12b9a6c9;
 }
+
+
+#inserirDados{
+  background-color: #b8b5b5dc;
+  border-radius: 15px;
+  text-align: center;
+  margin: auto;
+  width: 70%;
+  padding-bottom: 1%;
+}
+
+#inserirDados > label{
+  font-weight: bold;
+}
+
+#inserirDados > input{
+  margin-top: 3%;
+  border-radius: 8px;
+}
+
+#inserirDados > div{
+  margin-top: 3%;
+}
+
+#inserirDados > div > a{
+  color: #0b9957;
+  font-weight: bold;
+  margin-right: 5%;
+}
+
+#inserirDados > div > a:hover{
+  color: #3a867e;
+}
+
+#acessar{
+  text-align: center;
+  margin-top: 2%;
+}
+
+#acessar > input{
+  background-color: #2faa71d5;
+  border-radius: 10px;
+  font-weight: bold;
+  padding-right: 15%;
+  padding-left: 15%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+#acessar > input:hover{
+  background-color: #3a867e;
+}
+
+#criarUmaConta{
+  margin: auto;
+  background-color: #b8b5b5dc;
+  border-radius: 15px;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+
+#criarUmaConta > label{
+  font-weight: bold;
+}
+
+#criarUmaConta > input{
+  border-radius: 8px;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+#criarUmaConta > select{
+  border-radius: 8px;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+#contaCriada{
+  text-align: center;
+}
+
+#contaCriada > input{
+  border-radius: 8px;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  background-color: #2faa71d5;
+  border-radius: 10px;
+  font-weight: bold;
+  padding-right: 15%;
+  padding-left: 15%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+#contaCriada > input:hover{
+  background-color: #3a867e;
+}
+
+#irParaContaEntrar{
+  text-align: center;
+  margin-top: 5%;
+}
+
+#irParaContaEntrar > a{
+  color: #000;
+  background-color: #2faa71d5;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 2%;
+}
+
+#irParaContaEntrar > a:hover{
+  background-color: #3a867e;
+}
+
+.baseDoForm{
+  background-color: #b8b5b5dc;
+  border-radius: 15px;
+  padding: 2%;
+  width: 66%;
+  margin: auto;
+}
+
+.baseDoForm > input{
+  border-radius: 8px;
+  margin-bottom: 3%;
+}
+
+.baseDoForm > input[type="text"]{
+  margin-right: 4%;
+}
+
+.botaoSubmit{
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+
+.botaoSubmit > input{
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: #2faa71d5;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.botaoSubmit > input:hover{
+  background-color: #3a867e;
+}
