@@ -2939,3 +2939,8 @@ label{
 .botaoSubmit > input:hover{
   background-color: #3a867e;
 }
+
+.subtitulos{
+  text-align: center;
+  margin-bottom: 3%;
+}
