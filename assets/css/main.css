@@ -2944,3 +2944,16 @@ label{
   text-align: center;
   margin-bottom: 3%;
 }
+
+#deixarCerto{
+  margin: auto;
+  padding-bottom: 2%;
+}
+
+#deixarCerto > h2{
+  text-align: center;
+}
+
+#deixarCerto > p{
+  text-align: center;
+}
