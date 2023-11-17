@@ -116,7 +116,7 @@
           
           <div id="valores">
             <label for="valor">Escolha o valor que voce quer doar: </label>
-            <select name="opcoes1">
+            <select name="opcoes1" id="opc">
               <option value="Opção 1">R$ 10,00</option>
               <option value="Opção 2">R$ 30,00</option>
               <option value="Opção 3">R$ 50,00</option>
@@ -131,13 +131,13 @@
 
           <div id="informacoes">
             <label for="inome">Nome: </label>
-            <input type="text" name="nome" id="inome" required placeholder="Seu nome" autocomplete="name"><br>
+            <input type="text" name="nome" id="inome"  placeholder="Seu nome" autocomplete="name"><br>
 
             <label for="iemail">Email: </label>
-            <input type="email" name="email" id="iemail" required placeholder="Seu email" autocomplete="email"><br>
+            <input type="text" name="email" id="iemail"  placeholder="Seu email" autocomplete="email"><br>
 
             <label for="icpf">CPF: </label>
-            <input type="text" inputmode="numeric" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00"/>
+            <input type="text" id="icpfs" inputmode="numeric" placeholder="000.000.000-00"/>
               
           </div>
 
@@ -168,12 +168,12 @@
             <input type="number" name="numeroCartao" id="inumeroCartao1" placeholder="0000 0000 0000 0000">
 
             <label for="icpfTi1">CPF/CNPJ do titular: </label>
-            <input type="number" name="cpfTi1" id="icpfTi1" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+            <input type="text" name="cpfTi1" id="icpfTi1" placeholder="000.000.000-00">
 
             <label for="ivalidade1">Validade: </label>
             <input type="month" name="validade1" id="ivalidade1"><br>
 
-            <input type="submit" value="DOAR">
+            <input type="submit" value="DOAR" onclick="doacaoCre()">
           </div>
 
           <div id="pagamentoDebito">
@@ -192,12 +192,12 @@
             <input type="number" name="numeroCartao2" id="inumeroCartao2" placeholder="0000 0000 0000 0000">
 
             <label for="icpfTi2">CPF/CNPJ do titular: </label>
-            <input type="number" name="cpfTi2" id="icpfTi2" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+            <input type="text" name="cpfTi2" id="icpfTi2" placeholder="000.000.000-00">
 
             <label for="ivalidade2">Validade: </label>
             <input type="month" name="validade2" id="ivalidade2"><br>
 
-            <input type="submit" value="DOAR">
+            <input type="submit" value="DOAR" onclick="doacaoDeb()">
           </div>
 
           <div id="pagamentoDebitoEmConta">
@@ -205,7 +205,7 @@
             <input type="text" name="nomeCartao3" id="inomeCartao3" placeholder="Nome do titular da conta">
 
             <label for="idocumento">Documento Titular: </label>
-            <input type="number" name="documento" id="idocumento" placeholder="000.000.000-00">
+            <input type="text" name="documento" id="idocumento" placeholder="000.000.000-00">
 
             <label for="banco">Banco: </label>
             <select name="opcoes4">
@@ -213,18 +213,18 @@
             </select><br>
 
             <label for="icpfTi3">CPF/CNPJ do titular: </label>
-            <input type="number" name="cpfTi3" id="icpfTi3" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+            <input type="text" name="cpfTi3" id="icpfTi3" placeholder="000.000.000-00">
 
             <label for="iagencia">Agência: </label>
-            <input type="number" name="agencia" id="iagencia" max="9999" placeholder="0000">
+            <input type="number" name="agencia" id="iagencia" placeholder="0000">
 
             <label for="idia">Dia do debito: </label>
-            <input type="number" name="dia" id="idia" min="1" max="31" placeholder="Dia"><br>
+            <input type="number" name="dia" id="idia" placeholder="Dia"><br>
 
             <label for="iconta">Conta: </label>
-            <input type="number" name="conta" id="iconta" placeholder="00000-0"><br>
+            <input type="text" name="conta" id="iconta" placeholder="00000-0"><br>
 
-            <input type="submit" value="DOAR">
+            <input type="submit" value="DOAR" onclick="doacaoEmConta()">
           </div>
         </form>
       </div>
@@ -342,6 +342,7 @@
   
 
   <script src="assets/js/main.js"></script>
+  <script src="modificacoes.js"></script>
 
 </body>
 
