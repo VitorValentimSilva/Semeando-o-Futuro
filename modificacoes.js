@@ -337,3 +337,101 @@ function doacaoEmConta(){
     doacao()
   }
 }
+
+function criarConta(){
+  var nomeCriar = document.querySelector("#inome").value
+  var dataCriar = document.querySelector("#idata").value
+  var emailCriar = document.querySelector("#iemail").value
+  var senhaCriar = document.querySelector("#isenha").value
+  var confirmarSenhaCriar = document.querySelector("#irepitaSenha").value
+  var celCriar = document.querySelector("#icelular").value
+  var cpfCriar = document.querySelector("#icpf").value
+  var cidadeCriar = document.querySelector("#icidade").value
+  
+  var separarNomeCriar = nomeCriar.split(" ")
+
+  for(i = 0; i <separarNomeCriar.length; i++){
+    if(i >= 1){
+      nomeCar++
+    }
+  }
+
+  if(nomeCar == 0){
+    alert("O campo nome tem que ter no minimo 2 nomes!")
+  }
+
+  if(dataCriar == ""){
+    alert("O campo data de nascimento esta vazio!")
+  }
+  else{
+    validadeCar++
+  }
+  
+  for(i = 0; i < emailCriar.length; i++){
+    if(emailCriar[i] == '@'){
+      cvcCar++
+    }
+  }
+
+  if(cvcCar == 0){
+    alert("O campo email tem que ter @!")
+  }
+
+  if(senhaCriar.length <= 10){
+    alert("A senha tem que ter mais de 10 caracteres!")
+  }
+  else{
+    numCar++
+  }
+
+  if(senhaCriar != confirmarSenhaCriar){
+    alert("Digite a mesma senha no campo confirmar senha!")
+  }
+  else{
+    cpfCar++
+  }
+
+  var temCel = 0
+
+  if(celCriar == "" || celCriar[0] != '(' || celCriar.length > 16){
+    alert("O campo celular esta errado tem que ser assim: (00) 000000000!")
+  }
+  else{
+    temCel++
+  }
+
+  for(i = 0; i < cpfCriar.length; i++){
+    if(cpfCriar[i] == "." || cpfCriar[i] == "-"){
+      cpfPontoCar++
+      cpfRiscoCar++
+    }
+  }
+
+  var cpfTemCriar = 0
+
+  if(cpfPontoCar != 2 && cpfRiscoCar != 1 && cpfCriar.length < 14 || cpfCriar.length > 17){
+    alert("O campo cpf esta errado, como deve ser: 000.000.000-00!")
+  }
+  else{
+    cpfTemCriar++
+  }
+
+  var ciTem = 0
+
+  if(cidadeCriar == ""){
+    alert("O campo cidade esta vazio!")
+  }
+  else{
+    ciTem++
+  }
+
+  if(nomeCar == 0 || cvcCar == 0 || numCar == 0 || cpfCar == 0 || validadeCar == 0 || temCel == 0 || cpfTemCriar == 0 || ciTem == 0){
+    form.addEventListener("submit", function(event) {
+      event.preventDefault()
+    })
+  }
+  else{
+    form.action = "contaCriada.html"
+    form.submit()
+  }
+}

@@ -97,25 +97,25 @@
 
         <form action="contaCriada.html" method="post" autocomplete="on" id="criarUmaConta">
           <label for="inome">Nome completo: </label>
-          <input type="text" name="nome" id="inome" required placeholder="Digite seu nome completo" autocomplete="name">
+          <input type="text" name="nome" id="inome" placeholder="Digite seu nome completo" autocomplete="name">
 
           <label for="idata">Data de nascimento: </label>
-          <input type="date" name="data" id="idata" required>
+          <input type="date" name="data" id="idata">
 
-          <label for="iemial">Email: </label>
-          <input type="text" name="email" id="iemail" required placeholder="exemplo@gmail.com" autocomplete="email"><br>
+          <label for="iemail">Email: </label>
+          <input type="text" name="email" id="iemail" placeholder="exemplo@gmail.com" autocomplete="email"><br>
 
           <label for="isenha">Senha: </label>
-          <input type="password" name="senha" id="isenha" required placeholder="Digite uma senha">
+          <input type="password" name="senha" id="isenha" placeholder="Digite uma senha">
 
           <label for="irepitaSenha">Confirmar senha: </label>
-          <input type="password" name="irepitaSenha" id="irepitaSenha" required placeholder="Digite a mesma senha">
+          <input type="password" name="irepitaSenha" id="irepitaSenha" placeholder="Digite a mesma senha">
 
           <label for="icelular">Celular: </label>
-          <input type="tel" name="celular" id="icelular" required placeholder="(00) 000000000" autocomplete="tel"><br>
+          <input type="tel" name="celular" id="icelular" placeholder="(00) 000000000" autocomplete="tel"><br>
 
           <label for="icpf">CPF: </label>
-          <input type="number" name="cpf" id="icpf" required placeholder="000.000.000-00">
+          <input type="text" name="cpf" id="icpf" placeholder="000.000.000-00">
 
           <label for="iestado">Estado: </label>
           <select name="opcoes1">
@@ -148,10 +148,28 @@
           </select>
           
           <label for="icidade">Cidade: </label>
-          <input type="text" name="cidade" id="icidade" required placeholder="Digite sua cidade"><br>
+          <input type="text" name="cidade" id="icidade" placeholder="Digite sua cidade"><br>
+
+          <label for="icep">CEP:</label>
+          <input type="text" name="cep" id="icep" placeholder="00000-000">
+
+          <label for="irua">Rua: </label>
+          <input type="text" name="rua" id="irua" placeholder="Digite a sua rua">
+
+          <label for="ibairro">Bairro: </label>
+          <input type="text" name="bairro" id="ibairro" placeholder="Digite o seu bairro"><br>
+
+          <label for="inum">Numero: </label>
+          <input type="number" name="num" id="inum" placeholder="Digite o numero da casa"><br>
+
+          <label for="isexo1">Sexo: </label><br>
+          <input type="radio" id="isexo1" name="sexo" value="opcao1">
+          <label for="isexo1">Masculino</label><br>
+          <input type="radio" id="isexo2" name="sexo" value="opcao2">
+          <label for="isexo2">Feminino</label><br>
 
           <div id="contaCriada">
-            <input type="submit" value="Cadastrar">
+            <input type="submit" value="Cadastrar" onclick="criarConta()">
           </div>
         </form>
       </div>
@@ -221,6 +239,7 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
   <script src="assets/js/main.js"></script>
+  <script src="modificacoes.js"></script>
 
 </body>
 
