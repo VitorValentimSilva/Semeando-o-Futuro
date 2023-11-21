@@ -124,10 +124,10 @@
         <form action="agendamentoFeito.html" method="post">
           <div class="baseDoForm">
             <label for="itipo"><strong>Tipo de doação:</strong> </label>
-            <input type="text" name="tipo" id="itipo" required placeholder="Digite o tipo de doação">
+            <input type="text" name="tipo" id="itipo" placeholder="Digite o tipo de doação">
 
             <label for="iquant"><strong>Quantidade:</strong> </label>
-            <input type="number" name="quant" id="iquant" required placeholder="Digite a quantidade"><br>
+            <input type="number" name="quant" id="iquant" placeholder="Digite a quantidade"><br>
 
             <label for="ilevar"><strong>Escolha:</strong> </label><br>
 
@@ -141,11 +141,11 @@
             <input type="text" name="endereco" id="iendereco" placeholder="Digite seu endereço"><br>
 
             <label for="idataHora"><strong>Data e hora: </strong></label>
-            <input type="datetime-local" name="dataHora" id="idataHora" required>
+            <input type="datetime-local" name="dataHora" id="idataHora">
           </div>
 
           <div class="botaoSubmit">
-            <input type="submit" value="Agendar">
+            <input type="submit" value="Agendar" onclick="agendar()">
           </div>
         </form>
 
@@ -157,25 +157,25 @@
         <form action="cadastroFeito.html" method="post">
           <div class="baseDoForm">
             <label for="inome"><strong>Nome completo:</strong> </label>
-            <input type="text" name="nome" id="inome" required placeholder="Digite seu nome completo" autocomplete="name">
+            <input type="text" name="nome" id="inome" placeholder="Digite seu nome completo" autocomplete="name">
 
             <label for="itelefone"><strong>Telefone:</strong> </label>
-            <input type="tel" name="telefone" id="itelefone" required placeholder="(00) 000000000" autocomplete="tel">
+            <input type="tel" name="telefone" id="itelefone" placeholder="(00) 000000000" autocomplete="tel">
 
             <label for="ihabi"><strong>Habilidades:</strong> </label>
-            <input type="text" name="habi" id="ihabi" required placeholder="Digite as suas habilidades"><br>
+            <input type="text" name="habi" id="ihabi" placeholder="Digite as suas habilidades"><br>
 
             <label for="idispoDia"><strong>Disponibilidade de dia:</strong> </label>
-            <input type="text" name="dispoDia" id="idispoDia" required placeholder="Que dia até que dia"><br>
+            <input type="text" name="dispoDia" id="idispoDia" placeholder="Que dia até que dia"><br>
 
             <label for="idispoHora1"><strong>Disponibilidade de horário:</strong> </label>
-            <input type="time" name="dispoHora1" id="idispoHora1" required>
+            <input type="time" name="dispoHora1" id="idispoHora1">
             <label for="idispoHora2">até ás </label>
-            <input type="time" name="dispoHora2" id="idispoHora2" required>
+            <input type="time" name="dispoHora2" id="idispoHora2">
           </div>
 
           <div class="botaoSubmit">
-            <input type="submit" value="Enviar cadastro">
+            <input type="submit" value="Enviar cadastro" onclick="voluntario()">
           </div>
         </form>
 
@@ -246,6 +246,7 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
   <script src="assets/js/main.js"></script>
+  <script src="modificacoes.js"></script>
 
 </body>
 

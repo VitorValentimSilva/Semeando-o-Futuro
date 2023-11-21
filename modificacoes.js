@@ -471,3 +471,89 @@ function entrarConta(){
     form.submit()
   }
 }
+
+function agendar(){
+  var tipoDocao = document.querySelector("#itipo").value
+  var quant = document.querySelector("#iquant").value
+  
+  if(tipoDocao == ""){
+    alert("O campo tipo de doacao esta vazio!")
+  }
+  else{
+    nomeCar++
+  }
+
+  if(quant == "" || quant <= 0){
+    alert("O campo quantidade esta vazio ou esta com valor 0!")
+  }
+  else{
+    cpfCar++
+  }
+
+  if(cpfCar == 0 || nomeCar == 0){
+    form.addEventListener("submit", function(event) {
+      event.preventDefault()
+    })
+  }
+  else{
+    form.action = "agendamentoFeito.html"
+    form.submit()
+  }
+}
+
+function voluntario(){
+  var nomeVolu = document.querySelector("#inome").value
+  var tel = document.querySelector("#itelefone").value
+  var habi = document.querySelector("#ihabi").value
+  var diaAteDia = document.querySelector("#idispoDia").value
+  
+  var tem1 = 0
+  var tem2 = 0
+  var tem3 = 0
+  var tem4 = 0
+  
+
+  var separarNomeVolu = nomeVolu.split(" ")
+
+  for(i = 0; i <separarNomeVolu.length; i++){
+    if(i >= 1){
+      tem1++
+    }
+  }
+
+  if(tem1 == 0){
+    alert("O campo nome tem que ter no minimo 2 nomes!")
+  }
+
+  if(tel == "" || tel[0] != '(' || tel.length > 16){
+    alert("O campo telefone esta errado tem que ser assim: (00) 000000000!")
+  }
+  else{
+    tem2++
+  }
+
+  if(habi == ""){
+    alert("O campo habilidades esta vazio!")
+  }
+  else{
+    tem3++
+  }
+
+  if(diaAteDia == ""){
+    alert("O camo disponibilidade de dia esta vazio!")
+  }
+  else{
+    tem4++
+  }
+
+  if(tem1 == 0){
+    alert(`${tem1}`)
+    form.addEventListener("submit", function(event) {
+      event.preventDefault()
+    })
+  }
+  else{
+    form.action = "cadastroFeito.html"
+    form.submit()
+  }
+}
