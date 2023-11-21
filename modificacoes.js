@@ -502,58 +502,67 @@ function agendar(){
 }
 
 function voluntario(){
-  var nomeVolu = document.querySelector("#inome").value
-  var tel = document.querySelector("#itelefone").value
-  var habi = document.querySelector("#ihabi").value
-  var diaAteDia = document.querySelector("#idispoDia").value
-  
-  var tem1 = 0
-  var tem2 = 0
-  var tem3 = 0
-  var tem4 = 0
-  
+  var form2 = document.querySelector("#voll")
 
-  var separarNomeVolu = nomeVolu.split(" ")
+  var nomeVol = document.querySelector("#inome").value
+  var telVol = document.querySelector("#itelefone").value
+  var habiVol = document.querySelector("#ihabi").value
+  var dispoDia = document.querySelector("#idispoDia").value
+  var dispoHr1 = document.querySelector("#idispoHora1").value
+  var dispoHr2 = document.querySelector("#idispoHora2").value
 
-  for(i = 0; i <separarNomeVolu.length; i++){
+  var separarNomeVol = nomeVol.split(" ")
+
+  for(i = 0; i < separarNomeVol.length; i++){
     if(i >= 1){
-      tem1++
+      nomeCar++
     }
   }
 
-  if(tem1 == 0){
+  if(nomeCar == 0){
     alert("O campo nome tem que ter no minimo 2 nomes!")
   }
 
-  if(tel == "" || tel[0] != '(' || tel.length > 16){
-    alert("O campo telefone esta errado tem que ser assim: (00) 000000000!")
+  if(telVol.length > 16 || telVol[0] != '('){
+    alert("O campo telefone esta errado, tem que ser assim: (00) 000000000!")
   }
   else{
-    tem2++
+    cvcCar++
   }
 
-  if(habi == ""){
+  if(habiVol == ""){
     alert("O campo habilidades esta vazio!")
   }
   else{
-    tem3++
+    cpfCar++
   }
 
-  if(diaAteDia == ""){
-    alert("O camo disponibilidade de dia esta vazio!")
+  var separarDispo = dispoDia.split(" ")
+
+  for(i = 0; i < separarDispo.length; i++){
+    if(i >= 1){
+      numCar++
+    }
+  }
+
+  if(dispoDia == "" || numCar == 0){
+    alert("O campo disponibilidade de dia esta errado, exemplo de como deve ser: segunda ate sexta!")
+  }
+
+  if(dispoHr1 == "" || dispoHr2 == ""){
+    alert("O campo disponibilidade de horario esta vazio!")
   }
   else{
-    tem4++
+    validadeCar++
   }
 
-  if(tem1 == 0){
-    alert(`${tem1}`)
-    form.addEventListener("submit", function(event) {
+  if(nomeCar == 0 || cvcCar == 0 || cpfCar == 0 || numCar == 0 || validadeCar == 0){
+    form2.addEventListener("submit", function(event) {
       event.preventDefault()
     })
   }
   else{
-    form.action = "cadastroFeito.html"
-    form.submit()
+    form2.action = "agendamentoFeito.html"
+    form2.submit()
   }
 }
