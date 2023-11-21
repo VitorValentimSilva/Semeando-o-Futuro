@@ -98,10 +98,10 @@
         <form action="doacaoPlus.html" method="post">
           <div id="inserirDados">
             <label for="icpf">CPF: </label>
-            <input type="number" name="cpf" id="icpf" required placeholder="000.000.000-00"><br>
+            <input type="text" name="cpf" id="icpf" placeholder="000.000.000-00"><br>
 
             <label for="isenha">Senha: </label>
-            <input type="password" name="senha" id="isenha" required placeholder="Digite sua sehna">
+            <input type="password" name="senha" id="isenha" placeholder="Digite sua sehna">
             <div>
               <a href="#">Esqueci minha senha</a>
               <a href="contaCriar.html">Criar conta</a>
@@ -109,7 +109,7 @@
           </div>
 
           <div id="acessar">
-            <input type="submit" value="Entrar">
+            <input type="submit" value="Entrar" onclick="entrarConta()">
           </div>
         </form>
 
@@ -180,6 +180,7 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
   <script src="assets/js/main.js"></script>
+  <script src="modificacoes.js"></script>
 
 </body>
 

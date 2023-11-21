@@ -435,3 +435,39 @@ function criarConta(){
     form.submit()
   }
 }
+
+function entrarConta(){
+  var cpfEntrar = document.querySelector("#icpf").value
+  var senhaEntrar = document.querySelector("#isenha").value
+
+  for(i = 0; i < cpfEntrar.length; i++){
+    if(cpfEntrar[i] == "." || cpfEntrar[i] == "-"){
+      cpfPontoCar++
+      cpfRiscoCar++
+    }
+  }
+
+  if(cpfPontoCar != 2 && cpfRiscoCar != 1 && cpfEntrar.length < 14 || cpfEntrar.length > 17){
+    alert("O campo cpf esta errado, como deve ser: 000.000.000-00!")
+  }
+  else{
+    cpfCar++
+  }
+
+  if(senhaEntrar < 10){
+    alert("O campo senha tem menos de 10 caracteres!")
+  }
+  else{
+    numCar++
+  }
+
+  if(cpfCar == 0 || numCar == 0){
+    form.addEventListener("submit", function(event) {
+      event.preventDefault()
+    })
+  }
+  else{
+    form.action = "doacaoPlus.html"
+    form.submit()
+  }
+}
