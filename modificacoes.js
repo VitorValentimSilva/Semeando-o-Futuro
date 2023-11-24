@@ -566,3 +566,83 @@ function voluntario(){
     form2.submit()
   }
 }
+
+function sugerirMelhorias(){
+  var nome = document.querySelector("#inome").value
+  var email = document.querySelector("#iemail").value
+  var melhoria = document.querySelector("#imelhoria").value
+
+  if(nome == ""){
+    alert("O campo nome esta vazio!")
+    return
+  }
+
+  for(i = 0; i < email.length; i++){
+    if(email[i] == '@'){
+      cvcCar++
+    }
+  }
+
+  if(cvcCar == 0){
+    alert("O campo email tem que ter @!")
+    return
+  }
+
+  if(melhoria == ""){
+    alert("O campo sugestão de melhoria esta vazio!")
+    return
+  }
+
+  
+  var men = document.querySelector("#imen").value
+  var adicionar = document.querySelector("#adicionaR")
+  var html = ""
+
+  html = `<tr>
+            <td><input type="checkbox" name="todos" id="itodos"></td>
+            <td>${melhoria}</td>
+            <td>${men}</td>
+            <td>${nome}</td>
+            <td>${email}</td>  
+          </tr>`
+
+  adicionar.innerHTML += html
+
+  document.querySelector("#inome").value = ""
+  document.querySelector("#iemail").value = ""
+  document.querySelector("#imelhoria").value = ""
+  document.querySelector("#imen").value = ""
+}
+
+function selecionaTodos(){
+  var checkboxes = document.querySelectorAll("tbody input[type='checkbox']")
+  var selecionarTodosCheckbox = document.querySelector("#itodos")
+
+  for (i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].checked = selecionarTodosCheckbox.checked;
+  }
+}
+
+function enviarSugestoes(){
+  var tabela = document.getElementById("adicionaR")
+
+  if (tabela.rows.length === 0) {
+    alert("A tabela está vazia. Adicione sugestões antes de enviar.")
+  }
+  else{
+    window.location.href = "modificacoesMandadas.html"
+  }
+}
+
+function excluirSugestoes(){
+  var tabela = document.getElementById("adicionaR")
+  var linhas = tabela.getElementsByTagName("tr")
+
+  for(i = linhas.length - 1; i >= 0; i--) {
+    var checkbox = linhas[i].getElementsByTagName("input")[0]
+
+    if (checkbox && checkbox.type === "checkbox" && checkbox.checked) {
+      tabela.deleteRow(i)
+    }
+  }
+}

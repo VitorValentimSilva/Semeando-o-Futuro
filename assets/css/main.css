@@ -2957,3 +2957,95 @@ label{
 #deixarCerto > p{
   text-align: center;
 }
+
+#melhorias{
+  margin: auto;
+  text-align: center;
+  background-color: #cac1c1c0;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 640px;
+}
+
+#melhorias > input{
+  border: 2px solid black;
+  border-radius: 9px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 2%;
+  margin-right: 1%;
+}
+
+#melhorias > label{
+  font-weight: bold;
+}
+
+#melhorias > textarea{
+  border: 2px solid black;
+  border-radius: 9px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+#melhorias > button{
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 9px;
+  padding-right: 6%;
+  padding-left: 6%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  background-color: #34b87a;
+}
+
+table{
+  margin: auto;
+  width: 800px;
+  border: 1px solid rgba(0, 0, 0, 0.205);
+  border-radius: 10px;
+  border-spacing: 4px;
+}
+
+th, td{
+  word-wrap: break-word;
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.555);
+  border-radius: 10px;
+}
+
+#botoes{
+  margin-top: 3%;
+  text-align: center;
+}
+
+#botoes > button{
+  margin: auto;
+  border-radius: 10px;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  padding-right: 5%;
+  padding-left: 5%;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5%;
+}
+
+#enviarSu{
+  background-color: #34b87a;
+}
+
+#excluirSu{
+  background-color: #ca3333;
+}
+
+th > input[type="checkbox"], td > input[type="checkbox"]{
+  transform: scale(1.5);
+}

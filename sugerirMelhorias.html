@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Semeando o Futuro - Agendamento Realizada</title>
+  <title>Semeando o Futuro - Área de Sugestões</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -74,8 +74,7 @@
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
-              <h2>Obrigado pelo seu apoio!</h2>
-              <p>Sua doação faz a diferença</p>
+              <h2>Bem-vindo à Área de Sugestões!</h2>
             </div>
           </div>
         </div>
@@ -84,7 +83,7 @@
         <div class="container">
           <ol>
             <li><a href="index.html#hero">Inicio</a></li>
-            <li>Agendamento realizada</li>
+            <li>Sugerir Melhorias</li>
           </ol>
         </div>
       </nav>
@@ -92,21 +91,68 @@
 
     <section class="sample-page">
       <div class="container" data-aos="fade-up">
-
         <div class="section-header">
-          <h2>Agendamento Realizado com Sucesso!</h2>
+          <h2>Envie suas Sugestões de Melhoria</h2>
         </div>
 
-        <p>Agradecemos por confiar na nossa organização "Semeando o Futuro" e por ter realizado o agendamento com sucesso. Estamos entusiasmados em tê-lo(a) como parte ativa de nossos esforços em prol da preservação do meio ambiente.</p>
-        <p>A sua contribuição por meio desse agendamento é extremamente valiosa e nos ajudará a continuar nosso trabalho de proteção da natureza e promoção da sustentabilidade. Com sua participação, estaremos mais próximos de alcançar nossos objetivos e criar um futuro melhor para as gerações vindouras.</p>
-        <p>Agradecemos por dedicar seu tempo e recursos para apoiar nossas iniciativas. Sua participação é fundamental para o sucesso de nossos projetos e programas. Juntos, podemos fazer a diferença e deixar um legado positivo para o meio ambiente.</p>
-        <p>Caso tenha alguma dúvida ou precise de mais informações sobre o agendamento ou outras formas de envolvimento, não hesite em entrar em contato conosco. Estamos sempre prontos para ajudar.</p>
-        <p>Mais uma vez, agradecemos pela sua contribuição e por se juntar a nós nessa jornada em prol da natureza e do meio ambiente.</p>
-        <strong>
-          <p>Com gratidão, Equipe da "Semeando o Futuro"</p>
-        </strong>
+        <p>Agradecemos por dedicar um tempo para compartilhar suas ideias conosco! Estamos ansiosos para receber suas sugestões e melhorias para a nossa ONG. Para facilitar o processo, criamos um formulário simples e prático onde você pode enviar suas sugestões.</p>
+        <p>Preencha o formulário abaixo com suas informações e detalhes da sua sugestão de melhoria. Certifique-se de fornecer um nome e um endereço de e-mail válidos para que possamos entrar em contato, se necessário, e agradecer pessoalmente por sua contribuição.</p>
+        <p>Abaixo do formulário, você encontrará uma tabela que exibirá todas as melhorias que você adicionou. Cada sugestão será listada em uma linha separada, permitindo que você veja todas as suas contribuições de forma organizada.</p>
+        <p>Você pode adicionar quantas melhorias desejar. Basta preencher o formulário com a sugestão e clicar no botão "Adicionar na tabela" para que ela seja exibida na tabela abaixo. Se você quiser remover alguma sugestão, basta selecionar a opção de exclusão correspondente.</p>
+        <p>Ao finalizar todas as suas sugestões, clique no botão "Enviar" para nos enviar todas as melhorias listadas na tabela. Agradecemos novamente por sua participação e por nos ajudar a tornar nossa ONG ainda melhor!</p>
+        <p>Estamos ansiosos para receber suas ideias e trabalhar juntos para um futuro mais sustentável.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Formulário de Sugestões de Melhoria</h2>
+        </div>
+
+        <div id="melhorias">
+          <label for="inome">Nome: </label>
+          <input type="text" name="nome" id="inome" placeholder="Digite o seu nome completo.">
+
+          <label for="iemail">Email: </label>
+          <input type="text" name="email" id="iemail" placeholder="Digite o seu email."><br>
+
+          <label for="imelhoria">Sugestão de Melhoria: </label>
+          <input type="text" name="melhoria" id="imelhoria" placeholder="Digite a sua melhoria."><br>
+
+          <label for="imen">Fale mais da melhoria: </label><br>
+          <textarea name="men" id="imen" cols="30" rows="10" placeholder="Fale mais sobre a sua melhoria."></textarea><br>
+
+          <button onclick="sugerirMelhorias()">Adicionar na tabela.</button>
+        </div>
+      </div><br>
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Tabela de Sugestões de Melhoria</h2>
+        </div>
+
+        <div id="tabela">
+          <table>
+            <thead>
+              <tr>
+                <th><input type="checkbox" name="todos" id="itodos" onclick="selecionaTodos()"></th>
+                <th>Sugestão de Melhoria</th>
+                <th>Fale mais da melhoria</th>
+                <th>Nome</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+
+            <tbody id="adicionaR"></tbody>
+          </table>
+
+          <div id="botoes">
+            <button id="enviarSu" onclick="enviarSugestoes()">Enviar as sugestões.</button>
+            <button id="excluirSu" onclick="excluirSugestoes()">Excluir os selecionados.</button>
+          </div>
+        </div>
       </div>
     </section>
+
   </main>
 
   <footer id="footer" class="footer">
@@ -171,6 +217,7 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
   <script src="assets/js/main.js"></script>
+  <script src="modificacoes.js"></script>
 
 </body>
 
