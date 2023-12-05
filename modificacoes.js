@@ -594,7 +594,7 @@ function sugerirMelhorias(){
   }
 
   
-  var men = document.querySelector("#imen").value
+  var men = document.querySelector("#imen").value //input fale mais
   var adicionar = document.querySelector("#adicionaR")
   var html = ""
 
@@ -618,7 +618,7 @@ function selecionaTodos(){
   var checkboxes = document.querySelectorAll("tbody input[type='checkbox']")
   var selecionarTodosCheckbox = document.querySelector("#itodos")
 
-  for (i = 0; i < checkboxes.length; i++) {
+  for(i = 0; i < checkboxes.length; i++) {
     checkboxes[i].checked = selecionarTodosCheckbox.checked;
   }
 }
@@ -638,7 +638,7 @@ function excluirSugestoes(){
   var tabela = document.getElementById("adicionaR")
   var linhas = tabela.getElementsByTagName("tr")
 
-  for(i = linhas.length - 1; i >= 0; i--) {
+  for(i = linhas.length - 1; i >= 0; i--){
     var checkbox = linhas[i].getElementsByTagName("input")[0]
 
     if (checkbox && checkbox.type === "checkbox" && checkbox.checked) {
