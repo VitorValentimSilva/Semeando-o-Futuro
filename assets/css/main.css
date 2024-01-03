@@ -2851,18 +2851,50 @@ label{
 
 #criarUmaConta > label{
   font-weight: bold;
+  margin-bottom: 2%;
 }
 
 #criarUmaConta > input{
   border-radius: 8px;
-  margin-right: 2%;
-  margin-bottom: 2%;
+}
+
+#inome{
+  margin-right: 5%;
+}
+
+#idata{
+  margin-right: 5%;
+}
+
+#isenha{
+  margin-right: 13.1%;
+}
+
+#irepitaSenha{
+  margin-right: 3.7%;
+}
+
+#icpf{
+  margin-right: 15.1%;
+}
+
+#icep{
+  margin-right: 15.1%;
+}
+
+#irua{
+  margin-right: 14.4%;
+}
+
+#inum{
+  margin-right: 11.3%;
 }
 
 #criarUmaConta > select{
   border-radius: 8px;
   margin-right: 2%;
   margin-bottom: 2%;
+  margin-right: 13.3%;
 }
 
 #contaCriada{
