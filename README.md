@@ -31,5 +31,3 @@ Se você deseja contribuir para a melhoria do projeto, sinta-se à vontade para 
 ## Autor
 
 - Valentim Silva
-
-Agradecemos por visitar o projeto "Semeando o Futuro"! Esperamos que este site ajude a promover a conscientização e o apoio para a ONG fictícia.
